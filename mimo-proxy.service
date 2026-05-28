@@ -1,0 +1,15 @@
+[Unit]
+Description=MiMo Reasoning Content Proxy
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/workspace/server-20260528-mimo-proxy
+ExecStart=/root/.local/share/mise/installs/python/3.12.13/bin/python /srv/workspace/server-20260528-mimo-proxy/mimo_proxy.py
+Restart=always
+RestartSec=3
+Environment=PYTHONUNBUFFERED=1
+Environment=PATH=/root/.local/share/mise/installs/python/3.12.13/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+[Install]
+WantedBy=multi-user.target

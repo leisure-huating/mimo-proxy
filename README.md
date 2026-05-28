@@ -108,6 +108,9 @@ EOF
 systemctl daemon-reload
 systemctl enable --now mimo-proxy
 
+# 查看服务状态
+systemctl status mimo-proxy
+
 # 查看日志
 journalctl -u mimo-proxy -f
 ```
